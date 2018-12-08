@@ -19,7 +19,7 @@ public class ChangeColorWallpaperRender implements GLSurfaceView.Renderer {
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        gl.glClearColor(0.8f, 0.8f, mColorSize, 1.0f);     //设置背景颜色
+
     }
 
     @Override
@@ -29,6 +29,7 @@ public class ChangeColorWallpaperRender implements GLSurfaceView.Renderer {
 
     @Override
     public void onDrawFrame(GL10 gl) {
+        gl.glClearColor(0.8f, 0.8f, mColorSize, 1.0f);     //设置背景颜色
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
         gl.glLoadIdentity();
     }
