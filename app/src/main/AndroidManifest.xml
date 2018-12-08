@@ -53,6 +53,17 @@
                 android:name="android.service.wallpaper"
                 android:resource="@xml/wallpaper_follow_finger" />
         </service>
+
+        <service
+            android:name=".view.service.VideoWallpaperService"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper_video" />
+        </service>
     </application>
 
 </manifest>

@@ -13,6 +13,7 @@ import opengl.android.com.opengldemo.databinding.ActivityMainBinding;
 import opengl.android.com.opengldemo.presenter.MainPresenter;
 import opengl.android.com.opengldemo.view.service.ChangeColorWallpaperService;
 import opengl.android.com.opengldemo.view.service.FollowFingerWallpaperService;
+import opengl.android.com.opengldemo.view.service.VideoWallpaperService;
 
 /**
  * 主页
@@ -44,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void clickFollowFingerWallpaper(View view) {
         intentForWallPaper(FollowFingerWallpaperService.class);
+    }
+
+    /**
+     * 视频壁纸
+     *
+     * @param view
+     */
+    public void clickVideoWallpaper(View view) {
+        intentForWallPaper(VideoWallpaperService.class);
     }
 
     private void intentForWallPaper(Class wallpaperService) {

@@ -3,5 +3,6 @@
 
     <string name="btn_change_color_wallpaper">Change Color Wallpaper</string>
     <string name="btn_follow_finger_wallpaper">Follow Finger Wallpaper</string>
+    <string name="btn_video_wallpaper">Video Wallpaper</string>
     <string name="open_gl_wallpaper_title">OpenGL Wallpaper</string>
 </resources>

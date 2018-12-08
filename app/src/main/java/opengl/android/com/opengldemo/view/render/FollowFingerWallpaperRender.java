@@ -42,7 +42,7 @@ public class FollowFingerWallpaperRender implements GLSurfaceView.Renderer {
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-
+        gl.glViewport(0, 0, width, height);
     }
 
     @Override
@@ -95,7 +95,7 @@ public class FollowFingerWallpaperRender implements GLSurfaceView.Renderer {
     }
 
     /**
-     * 观察WallPaper服务destroy时
+     * 观察WallPaper服务destroy
      */
     public void onRelease() {
 
