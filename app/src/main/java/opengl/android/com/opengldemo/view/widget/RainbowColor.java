@@ -1,10 +1,10 @@
 package opengl.android.com.opengldemo.view.widget;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
+
+import opengl.android.com.opengldemo.utils.BufferUtils;
 
 /**
  * 彩虹色
@@ -31,10 +31,7 @@ public class RainbowColor {
      */
     private void initBuff() {
         //为颜色缓存区配置空间
-        mColorBuffer = ByteBuffer.allocateDirect(mColors.length * 4)
-                .order(ByteOrder.nativeOrder())
-                .asFloatBuffer()
-                .put(mColors);
+        mColorBuffer = BufferUtils.createFloatBuffer(mColors);
         mColorBuffer.position(0);
     }
 

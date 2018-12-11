@@ -41,5 +41,14 @@
             android:text="@string/btn_video_wallpaper"
             android:textAllCaps="false" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="clickDynamicBeamWallpaper"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/btn_dynamic_beam_wallpaper"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 </layout>

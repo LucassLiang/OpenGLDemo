@@ -4,7 +4,7 @@ import android.opengl.GLSurfaceView;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 
-import opengl.android.com.opengldemo.view.render.ChangeColorWallpaperRender;
+import opengl.android.com.opengldemo.view.render.ChangeColorWallpaperRenderer;
 
 /**
  * 可变颜色壁纸Service
@@ -18,12 +18,12 @@ public class ChangeColorWallpaperService extends GLWallpaperService {
     }
 
     private class ChangeColorEngine extends GLEngine {
-        private ChangeColorWallpaperRender mWallpaperRender;
+        private ChangeColorWallpaperRenderer mWallpaperRender;
 
         @Override
         public void onCreate(SurfaceHolder surfaceHolder) {
             super.onCreate(surfaceHolder);
-            mWallpaperRender = new ChangeColorWallpaperRender();
+            mWallpaperRender = new ChangeColorWallpaperRenderer();
             setRender(mWallpaperRender);
             setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
         }
@@ -40,7 +40,7 @@ public class ChangeColorWallpaperService extends GLWallpaperService {
         @Override
         public void onTouchEvent(MotionEvent event) {
             super.onTouchEvent(event);
-            mWallpaperRender.changedBgColor(getApplicationContext(), event);
+            mWallpaperRender.onTouchEvent(getApplicationContext(), event);
         }
     }
 }

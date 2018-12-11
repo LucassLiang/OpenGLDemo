@@ -49,6 +49,16 @@ public class VideoWallpaperService extends WallpaperService {
         }
 
         @Override
+        public void onVisibilityChanged(boolean visible) {
+            super.onVisibilityChanged(visible);
+            if (visible) {
+                mMediaPlayer.start();
+            } else {
+                mMediaPlayer.pause();
+            }
+        }
+
+        @Override
         public void onSurfaceDestroyed(SurfaceHolder holder) {
             if (mMediaPlayer != null) {
                 mMediaPlayer.reset();

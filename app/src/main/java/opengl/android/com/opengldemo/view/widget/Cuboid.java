@@ -1,11 +1,11 @@
 package opengl.android.com.opengldemo.view.widget;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
+
+import opengl.android.com.opengldemo.utils.BufferUtils;
 
 /**
  * 长方体
@@ -54,17 +54,11 @@ public class Cuboid {
      */
     private void initBuff() {
         //为顶点缓存区配置空间
-        mVertexBuffer = ByteBuffer.allocateDirect(mVertex.length * 4)
-                .order(ByteOrder.nativeOrder())
-                .asFloatBuffer()
-                .put(mVertex);
+        mVertexBuffer = BufferUtils.createFloatBuffer(mVertex);
         mVertexBuffer.position(0);
 
         //为绘制顺序配置空间
-        mIndexBuff = ByteBuffer.allocateDirect(mIndex.length * 2)
-                .order(ByteOrder.nativeOrder())
-                .asShortBuffer()
-                .put(mIndex);
+        mIndexBuff = BufferUtils.createShortBuffer(mIndex);
         mIndexBuff.position(0);
     }
 

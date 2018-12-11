@@ -12,6 +12,7 @@ import opengl.android.com.opengldemo.R;
 import opengl.android.com.opengldemo.databinding.ActivityMainBinding;
 import opengl.android.com.opengldemo.presenter.MainPresenter;
 import opengl.android.com.opengldemo.view.service.ChangeColorWallpaperService;
+import opengl.android.com.opengldemo.view.service.DynamicBeamWallpaperService;
 import opengl.android.com.opengldemo.view.service.FollowFingerWallpaperService;
 import opengl.android.com.opengldemo.view.service.VideoWallpaperService;
 
@@ -54,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void clickVideoWallpaper(View view) {
         intentForWallPaper(VideoWallpaperService.class);
+    }
+
+    /**
+     * 动态光束壁纸
+     *
+     * @param view
+     */
+    public void clickDynamicBeamWallpaper(View view) {
+        intentForWallPaper(DynamicBeamWallpaperService.class);
     }
 
     private void intentForWallPaper(Class wallpaperService) {
